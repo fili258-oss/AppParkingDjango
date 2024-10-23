@@ -28,6 +28,7 @@ SECRET_KEY = "django-insecure-zca_y0m55&7cw#o6b_8f5=!#l)u0z0$q7-uf=jh^cy=hdvwni(
 
 
 DEBUG = True
+AUTH_USER_MODEL = 'AppParking.Usuario'
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = ['GET','OPTIONS','PATCH','PUT','POST','DELETE']
