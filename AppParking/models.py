@@ -29,6 +29,7 @@ class Propietario(models.Model):
     nombres = models.CharField(max_length=100,null=False)
     identificacion = models.CharField(max_length=12,null=False,unique=True)
     email = models.EmailField(null=False)
+    edad = models.IntegerField(default=18)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

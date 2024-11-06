@@ -6,11 +6,12 @@ router = routers.DefaultRouter()
 router.register('parqueadero',ParqueaderoView)
 router.register('usuario',UsuarioView)
 router.register('tarifa',TarifaView)
-router.register('propietario',PropietarioView)
+router.register('propietario',PropietarioView,basename='propietario')
 router.register('vehiculo',VehiculoView)
 router.register('entradasalida',EntradaSalidaView)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('api-auth/', AuthTokenView.as_view() )
+    path('api-auth/', AuthTokenView.as_view() ),
+    path('propietariobyedad', PropietarioByEdad.as_view())
 ]
