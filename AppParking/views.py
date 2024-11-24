@@ -20,11 +20,7 @@ class TarifaView (viewsets.ModelViewSet):
     queryset = Tarifa.objects.all()
     serializer_class = TarifaSerializer
 class PropietarioView (viewsets.ModelViewSet):
-    def get_queryset(self):
-        an = self.request.query_params.get('an')
-        edad = 2024 - int(an)
-        queryset = Propietario.objects.filter(edad__gte=edad)
-        return queryset
+    queryset = Propietario.objects.all()
     serializer_class = PropietarioSerializer
 
 class PropietarioByEdad(APIView):

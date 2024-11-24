@@ -38,7 +38,7 @@ class TarifaSerializer(serializers.ModelSerializer):
 class PropietarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Propietario
-        fields = ['id','identificacion']
+        fields = '__all__'
 
 class VehiculoSerializer(serializers.ModelSerializer):
     parqueadero = ParqueaderoSerializer(read_only=True)
